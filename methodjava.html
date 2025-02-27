@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2>Java script methods</h2>
+            <p>Basic Methods</p>
+            <script>
+                var str="RoNaLdO iS NoOb ";
+                document.write(str.toUpperCase());
+                document.write("<br>");
+                document.write(str.toLowerCase());
+                    document.write("<br>");
+                    document.write(str.startsWith("B"));
+                        document.write("<br>");
+                        var str1="I learnt about Methods";
+                        var patt = new RegExp("RoNaLdO iS NoOb");
+                        var res = patt.test(str);
+                        document.write(res)
+                        document.write("<br>")
+                        var fruits = ["apple", "mango", "strawberry", "banana", "kiwi", "grapes", "orange", "cherry", "berry"]
+
+                            var text = "";
+
+                            var i;
+
+                            for (i = 0; i < fruits.length; i++) {
+
+                                text += fruits[i] + "<br>";
+
+                            }
+
+                            document.getElementById("demo").innerHTML = text;
+
+            </script>
+    </body>
+</html>
