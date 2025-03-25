@@ -1,0 +1,24 @@
+<html>
+    <head>
+         <title>Find the the thing making the numbers appear</title>
+        <!--(if you are close to the thing count the spaces,it makes sense if you know whats happning) -->
+        <!--write it in the <h2>-->
+            <h2></h2>
+    </head>
+    <body>
+        <p>see the title and the code</p>
+        <p id="search_result"></p>
+        <p id="replace_result"></p>
+        <p id="string_result"></p>
+        <script>
+            var str ="ronaldo is great";
+            var search_position=str.search("great");
+            var txt = str.replace("noob","great");
+            var x = 70;
+            var y = 90;
+            document.getElementById("search_result").innerHTML = search_position;
+            document.getElementById("replace_result").innerHTML = txt;
+            document.getElementById("string_result").innerHTML = eval("x+y");
+        </script>
+    </body>
+</html>
