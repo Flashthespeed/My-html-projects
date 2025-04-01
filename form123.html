@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+    <head>
+        <h1>deathday predictor</h1>
+        <h2>write birthwise</h2>
+        <script>
+            function validateForm() {
+                var x = document.forms["myForm"]["fname"].value;
+                if (x == "") {
+                    alert("tommorow is your deathday");
+                    return false;
+                }
+                else document.write("your deathday is " + x); 
+            }
+        </script>
+    </head>
+    <body>
+        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            year: <input type="text" name="fname"><br>
+            month: <input type="text" name="lname"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
