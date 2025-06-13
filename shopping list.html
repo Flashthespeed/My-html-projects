@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>shopping List</h1>
+</head>
+
+<body>
+    <form id="myForm">
+        <input id=myInput type="text">
+        <button>➕</button>
+    </form>
+    <ul id="myItem"></ul>
+    <h2>shopping list</h2>
+    <img src="https://dtlive.s3.ap-south-1.amazonaws.com/16607/E-Commerce-Shopping-Animated-GIF-Icon-pack-by-Discover-Template-1.gif">
+    <script>
+        var myForm = document.getElementById("myForm");
+        var myInput = document.getElementById("myInput");
+        var myItem = document.getElementById("myItem");
+
+        myForm.addEventListener("submit",
+            function (event) {
+                event.preventDefault()
+                createItem(myInput.value)
+            })
+
+        function createItem(inputItems) {
+            var items = `<li>${inputItems}
+	<button onclick="deleteElement(this)">🗑️</button> </li>`
+            myItem.insertAdjacentHTML("beforeend", items)
+            myInput.value = ""
+            myInput.focus()
+        }
+
+        function deleteElement(ElementToDelete) {
+            ElementToDelete.parentElement.remove()
+        }
+
+    </script>
+</body>
+</html>
